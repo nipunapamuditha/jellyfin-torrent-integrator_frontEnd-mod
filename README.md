@@ -5,7 +5,4 @@ Jellyfin Web is the frontend used for most of the clients available for end user
 > [!NOTE]
 > This repository contains modifications to integrate torrenting functionality into the Jellyfin web interface.
 
-<a href="https://translate.jellyfin.org/engage/jellyfin/?utm_source=widget">
-<img src="https://translate.jellyfin.org/widgets/jellyfin/-/jellyfin-web/multi-auto.svg" alt="Detailed Translation Status"/>
-</a>
-// ...existing code...
+
