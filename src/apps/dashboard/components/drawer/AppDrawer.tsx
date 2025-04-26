@@ -10,6 +10,7 @@ import DevicesDrawerSection from './sections/DevicesDrawerSection';
 import LiveTvDrawerSection from './sections/LiveTvDrawerSection';
 import AdvancedDrawerSection from './sections/AdvancedDrawerSection';
 import PluginDrawerSection from './sections/PluginDrawerSection';
+import TorrentSection from './sections/TorrentSection';
 
 const AppDrawer: FC<ResponsiveDrawerProps> = ({
     open = false,
@@ -29,6 +30,7 @@ const AppDrawer: FC<ResponsiveDrawerProps> = ({
         <ServerDrawerSection />
         <DevicesDrawerSection />
         <LiveTvDrawerSection />
+        <TorrentSection /> {/* Add your new section here */}
         <PluginDrawerSection />
         <AdvancedDrawerSection />
     </ResponsiveDrawer>
