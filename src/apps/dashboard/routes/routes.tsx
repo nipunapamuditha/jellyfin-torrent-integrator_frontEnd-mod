@@ -8,6 +8,7 @@ import { toViewManagerPageRoute } from 'components/router/LegacyRoute';
 import { LEGACY_ADMIN_ROUTES } from './_legacyRoutes';
 import ServerContentPage from 'components/ServerContentPage';
 import ErrorBoundary from 'components/router/ErrorBoundary';
+import { Component as TorrentSection } from './TorrentSection';
 
 export const DASHBOARD_APP_PATHS = {
     Dashboard: 'dashboard',

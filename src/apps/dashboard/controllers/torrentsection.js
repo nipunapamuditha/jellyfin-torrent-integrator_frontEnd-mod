@@ -2,21 +2,28 @@ import globalize from 'lib/globalize';
 import loading from 'components/loading/loading';
 import 'elements/emby-button/emby-button';
 import Dashboard from 'utils/dashboard';
-import toast from 'components/toast/toast';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { Component } from '../routes/TorrentSection';
 
-export default function(view) {
-    view.addEventListener('viewshow', function() {
-        // Initialize your torrent section page here
-        // For example, load torrents from an API
+export default function (view) {
+    // This function gets called when the page is shown
+    view.addEventListener('viewshow', function () {
+        loading.show();
         
-        // Sample code to show data
         const mainContent = view.querySelector('.mainContent');
-        mainContent.innerHTML = '<p>Torrent functionality will be implemented here</p>';
+        
+        // Render the React component into the mainContent div
+        ReactDOM.render(React.createElement(Component), mainContent);
         
         loading.hide();
     });
     
-    view.addEventListener('viewbeforehide', function() {
-        // Clean up any resources when navigating away
+    // Clean up React component when leaving the page
+    view.addEventListener('viewhide', function () {
+        const mainContent = view.querySelector('.mainContent');
+        if (mainContent) {
+            ReactDOM.unmountComponentAtNode(mainContent);
+        }
     });
 }
